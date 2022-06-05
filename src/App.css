@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+.point-block {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.point-root {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid red;
+    height: 650px;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.point-block,
+p {
+    font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.point-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.point-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.increment,
+.decrease {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0 0;
+}
+
+.todo-container {
+    margin: 0 0 0 20px;
+}
+
+.page-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 0;
+}
+
+.btn-add {
+    padding: 6px;
+    background-color: rgb(214, 196, 196);
+    margin: 0 0 0 5px;
+}
+
+.todo-list-block {}
+
+.todo-list-block,
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.editBlock {
+    position: absolute;
+    display: none;
+    right: -322px;
+}
+
+.editBlock.active {
+    display: flex;
+}
+
+.todo-list-block,
+ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number] {
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #000;
+    font-family: "OpenSans-SemiBold", arial, helvetica, sans-serif;
+    font-weight: normal;
+    width: 100%;
+    background: white;
+    padding: 9px 20px;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    height: 54px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
 }
